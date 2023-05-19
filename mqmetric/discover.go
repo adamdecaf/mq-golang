@@ -277,7 +277,7 @@ func RediscoverAttributes(objectType int32, objectPatterns string) error {
 		infoMap = amqpInfoMap
 		fn = inquireAMQPChannelAttributes
 	default:
-		err = fmt.Errorf("Unsupported object type: ", objectType)
+		err = fmt.Errorf("Unsupported object type: %s", objectType)
 	}
 
 	if err == nil {
